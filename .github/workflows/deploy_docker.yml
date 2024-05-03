@@ -17,7 +17,7 @@ jobs:
               password: ${{ secrets.DOCKERHUB_TOKEN }}
 
         - run: docker build . -t testapp:v1
-        - run: docker scout quickview testapp:v1
+        # - run: docker scout quickview testapp:v1
         -
             name: Build and push
             uses: docker/build-push-action@v5
